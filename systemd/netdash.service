@@ -1,0 +1,14 @@
+[Unit]
+Description=Network probe dashboard
+After=netprobe.service
+
+[Service]
+Type=simple
+User=wills
+WorkingDirectory=/home/wills/probe
+ExecStart=/usr/bin/python3 /home/wills/probe/dashboard.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

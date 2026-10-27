@@ -1,0 +1,17 @@
+# Data: large, constantly changing, and a timing history of your own network
+probe/probe.db
+probe/probe.db-wal
+probe/probe.db-shm
+probe/*.db
+*.db
+*.db-wal
+*.db-shm
+*.bak
+backups/
+
+# Downloaded by scripts/fetch-chartjs.sh
+probe/static/
+
+# Python
+__pycache__/
+*.pyc

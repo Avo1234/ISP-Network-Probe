@@ -1,0 +1,16 @@
+[Unit]
+Description=Network probe (pings, Wi-Fi, DNS, HTTP -> SQLite)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=wills
+WorkingDirectory=/home/wills/probe
+ExecStart=/usr/bin/python3 /home/wills/probe/probe.py
+Restart=always
+RestartSec=10
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target
